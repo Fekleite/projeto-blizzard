@@ -36,7 +36,11 @@
 .game-card {
   display: block;
   width: 100%;
-  max-width: 28rem;
+  max-width: 30rem;
+
+  @media (max-width: 1440px) {
+    max-width: 28rem;
+  }
 
   .image {
     overflow: hidden;
@@ -46,6 +50,7 @@
     margin-bottom: 2.4rem;
 
     img {
+      width: 100%;
       transition: transform .3s ease-in;
     }
 

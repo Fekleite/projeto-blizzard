@@ -1,0 +1,188 @@
+.s-hero {
+  position: relative;
+
+  .slide-principal {
+    width: 100%;
+    height: 73.6rem;
+
+    .swiper-wrapper {
+      .swiper-slide {
+        padding-top: 17.3rem;
+
+        &.slide-01 {
+          background: url("../assets/banner-slide-01.jpg") no-repeat center center;
+
+          @media (min-width: 1441px) {
+            background-size: cover;
+            background-position-y: top;
+          }
+        }
+
+        &.slide-02 {
+          background: url("../assets/banner-slide-02.jpg") no-repeat center center;
+
+          @media (min-width: 1441px) {
+            background-size: cover;
+            background-position-y: top;
+          }
+        }
+
+        &.slide-03 {
+          background: url("../assets/banner-slide-03.jpg") no-repeat center center;
+
+          @media (min-width: 1441px) {
+            background-size: cover;
+            background-position-y: top;
+          }
+        }
+
+        .container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .left-content {
+          margin-left: 19.7rem;
+          width: 100%;
+          max-width: 62.3rem;
+
+          h2 {
+            font-weight: 700;
+            font-size: 6.4rem;
+            line-height: 110.2%;
+            color: #FFFFFF;
+            margin-bottom: 1.6rem;
+          }
+
+          p {
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 27px;
+            letter-spacing: -0.005em;
+            color: #FFFFFF;
+            margin-bottom: 3.2rem;
+          }
+
+          button {
+            padding: 0 32px;
+            line-height: 52px;
+            font-size: 1.6rem;
+            font-weight: 600;
+          }
+        }
+
+        .right-content {
+          width: 100%;
+          max-width: 29.2rem;
+
+          .logo {
+            width: 100%;
+            max-width: 28rem;
+            height: 18rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 11.2rem;
+          }
+
+          .video {
+            width: 100%;
+            max-width: 28rem;
+
+            span {
+              display: block;
+              text-align: right;
+              margin-bottom: 1.6rem;
+  
+              font-weight: 600;
+              font-size: 1.3rem;
+              line-height: 20px;
+              text-transform: uppercase;
+              color: #FFFFFF;
+            }
+
+            .btn-video {
+              width: 100%;
+              height: 15.8rem;
+              border-radius: 4px;
+              overflow: hidden;
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .thumb {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: opacity .3s;
+
+                &.default {
+                  opacity: 1;
+                }
+
+                &.hover {
+                  opacity: 0;
+                }
+
+                &:hover {
+                  &.default {
+                    opacity: 0;
+                  }
+  
+                  &.hover {
+                    opacity: 1;
+                  }
+                }
+              }
+
+              .icon {
+                position: relative;
+                z-index: 1;
+                width: 51px;
+                height: 51px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                pointer-events: none;
+
+                background: linear-gradient(136.72deg, rgba(7, 7, 10, 0.86) 19.22%, rgba(15, 16, 22, 0.5) 76.59%);
+                backdrop-filter: blur(3px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .slide-thumbnail {
+    position: absolute;
+    top: 24.1rem;
+    left: calc((100% - 131.5rem) / 2);
+    z-index: 2;
+    height: 32rem;
+
+    .swiper-wrapper {
+      .swiper-slide {
+        width: 4.8rem;
+        height: 4.8rem !important;
+        cursor: pointer;
+        filter: grayscale(100%);
+
+        &.disabled {
+          pointer-events: none;
+        }
+
+        &-thumb-active {
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+}

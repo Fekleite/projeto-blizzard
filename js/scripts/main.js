@@ -30,3 +30,17 @@ allFilters.forEach((filter, index) => {
     filter.classList.add('active');
   })
 })
+
+const btnOpenModal = document.querySelector(".js-open-modal");
+
+btnOpenModal.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  document.documentElement.classList.add('modal-active')
+})
+
+const btnCloseModal = document.querySelector(".js-close-modal");
+
+btnCloseModal.addEventListener('click', (e) => {
+  document.documentElement.classList.remove('modal-active')
+})
